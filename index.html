@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Heist ATM</title> 
+ 
+    <link rel="icon" href="black-mask.ico" type="image/x-icon"> 
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="atm-machine">
+        <h1 class="atm-heading"><i class="fas fa-mask"></i> The Heist ATM</h1>
+        <div class="screen">
+            <div id="message">Welcome! Please Enter Your PIN:</div>
+            <input type="password" id="pin-input" maxlength="4" placeholder="****">
+        </div>
+        <div class="keypad">
+            <div class="row">
+                <button class="key" onclick="enterDigit(1)">1</button>
+                <button class="key" onclick="enterDigit(2)">2</button>
+                <button class="key" onclick="enterDigit(3)">3</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="enterDigit(4)">4</button>
+                <button class="key" onclick="enterDigit(5)">5</button>
+                <button class="key" onclick="enterDigit(6)">6</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="enterDigit(7)">7</button>
+                <button class="key" onclick="enterDigit(8)">8</button>
+                <button class="key" onclick="enterDigit(9)">9</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="clearInput()">Clear</button>
+                <button class="key" onclick="enterDigit(0)">0</button>
+                <button class="key" onclick="submitPin()">Enter</button>
+            </div>
+        </div>
+        <div class="operations">
+            <button onclick="showBalance()">Balance</button>
+            <button onclick="withdrawCash()">Withdraw</button>
+            <button onclick="depositCash()">Deposit</button>
+        </div>
+    </div>
+
+    <audio id="bella-ciao" src="bella-ciao-italian-partisan-folk-song-from-the-late-19th-century-3052.mp3" preload="auto"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
